@@ -1,0 +1,4 @@
+pandas
+scikit-learn
+joblib
+flask              # (optional if you're building an API)

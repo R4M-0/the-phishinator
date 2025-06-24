@@ -1,0 +1,197 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('../public/bg-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.content {
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+/* Add this if you want a cyberpunk-style font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+.cyber-font {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Form Styles */
+.phish-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.url-input {
+  padding: 1rem;
+  border: 2px solid #00ffff;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.url-input:focus {
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.analyze-button {
+  padding: 1rem;
+  background-color: #00ffff;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+
+.analyze-button:hover:not(:disabled) {
+  background-color: #00b3b3;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+}
+
+.analyze-button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* Results Styles */
+.results-loading {
+  margin-top: 2rem;
+}
+
+.spinner {
+  border: 5px solid rgba(0, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 5px solid #00ffff;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.results-container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 5px;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.results-container.phishing {
+  border: 2px solid #ff5555;
+  box-shadow: 0 0 15px rgba(255, 85, 85, 0.5);
+}
+
+.results-container.safe {
+  border: 2px solid #55ff55;
+  box-shadow: 0 0 15px rgba(85, 255, 85, 0.5);
+}
+
+.status {
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.results-container.phishing .status {
+  color: #ff5555;
+}
+
+.results-container.safe .status {
+  color: #55ff55;
+}
+
+.results-error {
+  color: #ff5555;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+
+.dare-text {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #FF4500;
+  font-style: italic;
+  text-shadow: 0 0 5px rgba(255, 69, 0, 0.7);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+/* ====================== */
+/* Cyberpunk Red Theme */
+/* ====================== */
+.phishinator-text {
+  color: #ff0000;
+  text-shadow: 0 0 5px #ff0000, 
+               0 0 10px #8b0000,
+               0 0 20px #450000;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
+}
+
+/* ====================== */
+/* Button Loading State */
+/* ====================== */
+.analyze-button.loading {
+  position: relative;
+  color: transparent;
+}
+
+.analyze-button.loading .spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+/* ====================== */
+/* Timestamp Style */
+/* ====================== */
+.timestamp {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 1rem;
+}

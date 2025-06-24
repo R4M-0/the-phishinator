@@ -1,0 +1,59 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.log
+*.sqlite3
+*.db
+*.egg-info/
+*.egg
+*.so
+*.DS_Store
+.env
+.env.*
+.vscode/
+.idea/
+.cache/
+
+# === Flask API ===
+api/__pycache__/
+api/instance/
+api/*.pyc
+api/*.log
+models/
+models/phishing_model.pkl
+
+# === Jupyter Notebooks ===
+notebooks/.ipynb_checkpoints/
+
+# === Datasets ===
+data/
+!data/README.md  # Optional: keep a placeholder or metadata
+
+# === React Frontend ===
+the-phishinator/node_modules/
+the-phishinator/build/
+the-phishinator/.env
+the-phishinator/.env.local
+the-phishinator/.env.production.local
+the-phishinator/.env.development.local
+
+# === Test Cache ===
+tests/__pycache__/
+tests/.pytest_cache/
+tests/.coverage
+coverage.xml
+htmlcov/
+
+# === OS ===
+Thumbs.db
+.DS_Store
+
+# === Others ===
+*.swp
+*.bak
+*.tmp
+*.pid
+*.gz
+*.log
